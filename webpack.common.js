@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -12,8 +13,20 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  module: {},
-  plugins: [],
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: ['babel-loader', 'ts-loader'],
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public/index.html'),
+    }),
+  ],
   resolve: {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
