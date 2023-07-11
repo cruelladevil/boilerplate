@@ -8,24 +8,5 @@ module.exports = merge(common, {
     historyApiFallback: true,
     open: true,
   },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              plugins: ['react-refresh/babel'],
-            },
-          },
-          {
-            loader: 'ts-loader',
-          },
-        ],
-      },
-    ],
-  },
   plugins: [new ReactRefreshWebpackPlugin()],
 });
