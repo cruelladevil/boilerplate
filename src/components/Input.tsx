@@ -7,6 +7,8 @@ const Input = () => {
     setText(value);
   };
 
+  console.log('a' == 'a');
+
   return <input type="text" value={text} onChange={handleText} />;
 };
 
