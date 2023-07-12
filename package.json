@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --progress",
-    "build": "webpack --config webpack.prod.js --progress"
+    "build": "webpack --config webpack.prod.js --progress",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -15,9 +16,19 @@
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
     "babel-loader": "^9.1.2",
     "core-js": "^3.31.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.3",
+    "prettier": "^2.8.8",
     "react-refresh": "^0.14.0",
     "ts-loader": "^9.4.4",
     "webpack": "^5.88.1",
