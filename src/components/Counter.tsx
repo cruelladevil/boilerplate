@@ -1,4 +1,5 @@
-import { MouseEventHandler, useState } from 'react';
+import { useState } from 'react';
+import type { MouseEventHandler } from 'react';
 
 const Counter = () => {
   const [count, setCount] = useState(0);

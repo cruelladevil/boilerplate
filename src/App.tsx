@@ -1,5 +1,5 @@
-import Input from './components/Input';
 import Counter from './components/Counter';
+import Input from './components/Input';
 
 const App = () => {
   return (
