@@ -8,5 +8,5 @@ module.exports = merge(common, {
     historyApiFallback: true,
     open: true,
   },
-  plugins: [new ReactRefreshWebpackPlugin()],
+  plugins: [new ReactRefreshWebpackPlugin({ overlay: false })],
 });
