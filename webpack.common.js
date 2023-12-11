@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -17,6 +18,17 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          syntactic: true,
+        },
+      },
+      issue: {
+        include: [{ file: '**/src/**/*.{ts,tsx}' }],
+        exclude: [{ file: '**/*.test.{ts,tsx}' }],
+      },
     }),
   ],
   resolve: {
